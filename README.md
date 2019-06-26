@@ -8,7 +8,7 @@
 
 This project shows how to train the Banana colector environment in the Udacity modified (from Unity's Bannana-colector) environment.
 The goal of the agent is to collect as many yellow bananas while avoiding blue bananas. The environment grants positive rewards for yellow bananas and negative for blue ones.
-This project trains the agent to play the game using [ray-based](https://en.wikipedia.org/wiki/Ray_tracing_(graphics)) perception of objects arround the agent forward direction. Check [Report file](https://github.com/eduardodisanti/deep_reinforcement_learning_nd/blob/master/p1_banana/report/Report.pdf) for technical specifications, algorithm, hyperparameters and architecture of the neural network.
+This project trains the agent to play the game using [ray-based](https://en.wikipedia.org/wiki/Ray_tracing_(graphics)) perception of objects arround the agent forward direction. Check [Report file](https://github.com/eduardodisanti/drl_banana_collector/blob/master/report/Report.pdf) for technical specifications, algorithm, hyperparameters and architecture of the neural network.
 
 ## Files description
 

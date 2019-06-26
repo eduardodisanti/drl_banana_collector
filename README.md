@@ -51,9 +51,11 @@ In a jupyter notebook open play_banana.ipynb and run all cells.<br>
 At the end of 100 trails of 2000 steps each, a report will be shown containing the returns achieved by the agent.
 <img src="https://github.com/eduardodisanti/drl_banana_collector/blob/master/report/play_scores.png" alt="drawing" width="240"/><br/>
 
-## Agent characteristics
+## Apendices
 
-### Algorithm
+### Agent characteristics
+*Please check [Report file](https://github.com/eduardodisanti/drl_banana_collector/blob/master/report/Report.pdf) for a better understanding of the algorithm*
+#### Algorithm
 The agent uses a  [Deep Q-Learning algorithm](https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf)
 The neural network that estimate the action-value function has following architecture:
 
@@ -66,7 +68,7 @@ The neural network that estimate the action-value function has following archite
 
 The  optimization algorithm used was **Adam**
 Chossen learning rate **5e-4**
-#### Hyperparameters
+##### Hyperparameters
 -   Discount factor, $\gamma$ 0.99
 -   Soft-update ratio, $\tau$     0.001
 -   Network update interval
@@ -74,7 +76,7 @@ Chossen learning rate **5e-4**
     -  Target every **4** time steps.
 -   Replay buffer size  **64**
 -   Minibatch size **64**
--   $\epsilon$ configuration and anealing for **e-greedy policy**
+-   &epsilon; configuration and decay rate for **&epsilon;-greedy policy**
     -   Start          : 1
     -   Minumin.  : 0.01
     -   Decay rate: 0.995
@@ -96,37 +98,35 @@ And the reward history was:
 <td><img src="https://github.com/eduardodisanti/drl_banana_collector/blob/master/report/training2.png" width="520"/></td>
 <tr>
 </table>
-## Apendices
 
-### Future work
+#### Future work
 One behaiviour observed during training and playing, wich is coherent with, the high bias of DQN and the action frequencies shown, is the poor capacity for the agent to turn right, turning left was better learned.<br>
 The agent perform well, but in the future may worth to:
  - increase the number of neurons in the hidden layers
  - Use prioritized experience play
  - Use dueling DQN
 
-### Name and location of the trained model
-**banana_raytracing_eds.pt** located in the main folder
-
-### Running the play_banana
+#### Running the play_banana
 In the 7th cell the parameters can be adjusted, by default it runs 100 times with 2000 steps.
 An example of results :
 *Start game...*<br/>
+. . . . <br/>
 Total Reward: 13.0<br/>
 Total Reward: 11.0<br/>
-. . . . 
 Total Reward: 15.0<br/>
 Total Reward: 15.0<br/>
 Total Reward: 20.0<br/>
 Total Reward: 19.0<br/>
+. . . . <br/>
 Total Reward: 18.0<br/>
 Total Reward: 19.0<br/>
 Total Reward: 10.0<br/>
 Total Reward: 14.0<br/>
+. . . . <br/>
 *Game Over*<br/>
 <img src="https://github.com/eduardodisanti/drl_banana_collector/blob/master/report/play_scores.png" alt="drawing" width="480"/><br/>
 
-### Setting up the environment
+#### Setting up the environment
 1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
     - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
     - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
